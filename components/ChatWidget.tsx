@@ -223,14 +223,14 @@ export default function ChatWidget() {
                 {messages.length === 0 ? (
                   <div className="space-y-4 pt-1">
                     <div className="rounded-xl border border-primary/20 bg-[#111827] p-3">
-                      <p className="mb-2 text-xs font-mono text-primary">// initializing Kishlay AI...</p>
+                      <p className="mb-2 text-xs font-mono text-primary">{/* initializing Kishlay AI... */}</p>
                       <p className="text-sm leading-relaxed text-slate-300">
                         Hey! I&apos;m Kishlay&apos;s AI twin. Ask me anything about his skills,
                         experience, projects, or how to reach him 🚀
                       </p>
                     </div>
 
-                    <p className="text-center font-mono text-[11px] text-textMuted">// try a quick prompt:</p>
+                    <p className="text-center font-mono text-[11px] text-textMuted">{/* try a quick prompt: */}</p>
 
                     <div className="shimmer flex flex-wrap gap-2">
                       {quickPrompts.map((p) => (
@@ -336,7 +336,7 @@ export default function ChatWidget() {
                   </div>
                 </form>
                 <p className="mt-2 text-center font-mono text-[10px] text-textMuted">
-                  // kishlay-ai · groq · llama-3.1
+                  {/* kishlay-ai · groq · llama-3.1 */}
                 </p>
               </div>
             </motion.div>
