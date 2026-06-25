@@ -206,7 +206,7 @@ export default function ChatWidget() {
                       <FiZap className="h-3 w-3 text-primary" />
                       <p className="text-sm font-semibold text-primary">{personalInfo.name.split(" ")[0]} AI</p>
                     </div>
-                    <p className="text-[10px] text-textMuted">● Powered by Groq · Llama 3.1</p>
+                    <p className="text-[10px] text-textMuted">● Online</p>
                   </div>
                 </div>
                 <motion.button

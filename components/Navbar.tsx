@@ -30,6 +30,7 @@ export default function Navbar() {
   }, []);
 
   return (
+    <>
     <header
       className={`fixed left-0 top-0 z-50 w-full transition-all duration-300 ${
         scrolled ? "border-b border-primary/20 bg-background/70 backdrop-blur-md" : "bg-transparent"
@@ -235,115 +236,116 @@ export default function Navbar() {
           <FiMenu />
         </button>
       </nav>
+    </header>
 
-      <AnimatePresence>
-        {open ? (
-          <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ duration: 0.35, ease: "easeInOut" }}
-            className="fixed inset-0 z-[70] bg-background/95 p-8 backdrop-blur-lg md:hidden"
-          >
-            <div className="mb-12 flex items-center justify-between">
-              <span className="text-3xl font-bold text-primary">{personalInfo.initials}</span>
-              <button onClick={() => setOpen(false)} className="text-3xl text-textPrimary" aria-label="Close menu">
-                <FiX />
-              </button>
-            </div>
+    <AnimatePresence>
+      {open ? (
+        <motion.div
+          initial={{ x: "100%" }}
+          animate={{ x: 0 }}
+          exit={{ x: "100%" }}
+          transition={{ duration: 0.35, ease: "easeInOut" }}
+          className="fixed inset-0 z-[100] bg-background p-8 md:hidden"
+        >
+          <div className="mb-12 flex items-center justify-between">
+            <span className="text-3xl font-bold text-primary">{personalInfo.initials}</span>
+            <button onClick={() => setOpen(false)} className="text-3xl text-textPrimary" aria-label="Close menu">
+              <FiX />
+            </button>
+          </div>
 
-            <div className="flex flex-col gap-8">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-2xl font-semibold text-textPrimary"
-                  onClick={() => setOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ))}
-              <button
-                onClick={() => {
-                  chatStore.toggle();
-                  setOpen(false);
-                }}
-                className="group relative overflow-hidden flex w-fit items-center gap-2 rounded-full px-4 py-2.5 text-sm font-bold transition-all duration-300"
-                style={{
-                  background: "linear-gradient(135deg, #7c3aed 0%, #9333ea 50%, #a855f7 100%)",
-                  border: "1px solid rgba(168,85,247,0.4)",
-                  color: "#ffffff",
-                  boxShadow: "0 0 20px rgba(124,58,237,0.5), 0 4px 15px rgba(0,0,0,0.3)",
-                  animation: "aiChatGlow 3s ease-in-out infinite"
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow =
-                    "0 0 35px rgba(168,85,247,0.7), 0 0 60px rgba(124,58,237,0.3), 0 4px 15px rgba(0,0,0,0.3)";
-                  e.currentTarget.style.transform = "translateY(-1px)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = "0 0 20px rgba(124,58,237,0.5), 0 4px 15px rgba(0,0,0,0.3)";
-                  e.currentTarget.style.transform = "translateY(0)";
-                }}
-              >
-                {/* Shine sweep */}
-                <span
-                  className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"
-                  style={{
-                    background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)"
-                  }}
-                />
-                {/* Robot icon — bounces on hover */}
-                <RiRobot2Fill className="relative h-4 w-4 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110" />
-                <span className="relative font-mono text-xs tracking-wide">
-                  AI Chat
-                </span>
-                {/* Pulsing dot */}
-                <span className="relative flex h-2 w-2">
-                  <span
-                    className="absolute inline-flex h-full w-full rounded-full bg-white opacity-75"
-                    style={{ animation: "ping 1.5s cubic-bezier(0,0,0.2,1) infinite" }}
-                  />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
-                </span>
-              </button>
+          <div className="flex flex-col gap-8">
+            {navLinks.map((link) => (
               <a
-                href="#contact"
-                className="group relative mt-8 inline-flex w-fit overflow-hidden rounded-full px-5 py-2.5 text-sm font-bold tracking-wide transition-all duration-300"
-                style={{
-                  background: "linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%)",
-                  color: "#ffffff",
-                  border: "1px solid rgba(239,68,68,0.3)",
-                  boxShadow: "0 0 20px rgba(239,68,68,0.4), 0 4px 15px rgba(0,0,0,0.3)",
-                  animation: "hireMeGlow 2.5s ease-in-out infinite"
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow =
-                    "0 0 35px rgba(239,68,68,0.7), 0 0 60px rgba(220,38,38,0.3), 0 4px 15px rgba(0,0,0,0.3)";
-                  e.currentTarget.style.transform = "translateY(-1px)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow =
-                    "0 0 20px rgba(239,68,68,0.4), 0 4px 15px rgba(0,0,0,0.3)";
-                  e.currentTarget.style.transform = "translateY(0px)";
-                }}
+                key={link.href}
+                href={link.href}
+                className="text-2xl font-semibold text-textPrimary"
                 onClick={() => setOpen(false)}
               >
-                {/* Shine sweep on hover */}
-                <span
-                  className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"
-                  style={{
-                    background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)"
-                  }}
-                />
-                <span className="relative font-bold">
-                  Hire Me
-                </span>
+                {link.label}
               </a>
-            </div>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
-    </header>
+            ))}
+            <button
+              onClick={() => {
+                chatStore.toggle();
+                setOpen(false);
+              }}
+              className="group relative overflow-hidden flex w-fit items-center gap-2 rounded-full px-4 py-2.5 text-sm font-bold transition-all duration-300"
+              style={{
+                background: "linear-gradient(135deg, #7c3aed 0%, #9333ea 50%, #a855f7 100%)",
+                border: "1px solid rgba(168,85,247,0.4)",
+                color: "#ffffff",
+                boxShadow: "0 0 20px rgba(124,58,237,0.5), 0 4px 15px rgba(0,0,0,0.3)",
+                animation: "aiChatGlow 3s ease-in-out infinite"
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow =
+                  "0 0 35px rgba(168,85,247,0.7), 0 0 60px rgba(124,58,237,0.3), 0 4px 15px rgba(0,0,0,0.3)";
+                e.currentTarget.style.transform = "translateY(-1px)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = "0 0 20px rgba(124,58,237,0.5), 0 4px 15px rgba(0,0,0,0.3)";
+                e.currentTarget.style.transform = "translateY(0)";
+              }}
+            >
+              {/* Shine sweep */}
+              <span
+                className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"
+                style={{
+                  background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)"
+                }}
+              />
+              {/* Robot icon — bounces on hover */}
+              <RiRobot2Fill className="relative h-4 w-4 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110" />
+              <span className="relative font-mono text-xs tracking-wide">
+                AI Chat
+              </span>
+              {/* Pulsing dot */}
+              <span className="relative flex h-2 w-2">
+                <span
+                  className="absolute inline-flex h-full w-full rounded-full bg-white opacity-75"
+                  style={{ animation: "ping 1.5s cubic-bezier(0,0,0.2,1) infinite" }}
+                />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
+              </span>
+            </button>
+            <a
+              href="#contact"
+              className="group relative mt-8 inline-flex w-fit overflow-hidden rounded-full px-5 py-2.5 text-sm font-bold tracking-wide transition-all duration-300"
+              style={{
+                background: "linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%)",
+                color: "#ffffff",
+                border: "1px solid rgba(239,68,68,0.3)",
+                boxShadow: "0 0 20px rgba(239,68,68,0.4), 0 4px 15px rgba(0,0,0,0.3)",
+                animation: "hireMeGlow 2.5s ease-in-out infinite"
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow =
+                  "0 0 35px rgba(239,68,68,0.7), 0 0 60px rgba(220,38,38,0.3), 0 4px 15px rgba(0,0,0,0.3)";
+                e.currentTarget.style.transform = "translateY(-1px)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow =
+                  "0 0 20px rgba(239,68,68,0.4), 0 4px 15px rgba(0,0,0,0.3)";
+                e.currentTarget.style.transform = "translateY(0px)";
+              }}
+              onClick={() => setOpen(false)}
+            >
+              {/* Shine sweep on hover */}
+              <span
+                className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"
+                style={{
+                  background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)"
+                }}
+              />
+              <span className="relative font-bold">
+                Hire Me
+              </span>
+            </a>
+          </div>
+        </motion.div>
+      ) : null}
+    </AnimatePresence>
+    </>
   );
 }

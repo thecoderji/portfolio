@@ -39,11 +39,11 @@ export const personalInfo = {
   role: "AI Engineer",
   taglines: [
     "AI Engineer",
-    "Python Developer",
+    "GenAI Engineer",
+    "Agentic AI Builder",
     "LLM Builder",
-    "RAG Specialist",
-    "Backend Developer",
-    "Agentic AI Builder"
+    "Python Developer",
+    "Backend Developer"
   ],
   bio: "Building intelligent systems with LLMs, RAG pipelines, and Agentic AI. Turning complex AI concepts into production-ready applications that actually work.",
   journey:
@@ -55,7 +55,7 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/kishlaychoudhary/",
   leetcode: "https://leetcode.com/u/thecoderji/",
   resume:
-    "https://drive.google.com/uc?export=download&id=1yOfQ4z6W93oPqWOSoI8J2l05l10ZcZcR",
+    "https://drive.google.com/file/d/1U30j0MGHaZvki34vTxZqhmYBDk5j83ZI/view?usp=sharing",
   location: "Delhi, India",
   locationShort: "Delhi",
   openTo: "Pan India · Remote",
@@ -159,21 +159,23 @@ export const experiences = [
     role: "Research Associate - AI",
     company: "Keywords Studios",
     location: "Gurugram, Haryana",
-    duration: "September 2025 – Present",
+    duration: "August 2025 – June 2026",
     type: "Full-time",
-    tags: ["LLM Evaluation", "Prompt Engineering", "CoT", "NLP", "GenAI", "RLHF"],
+    tags: ["Multi-Agent Systems", "RLHF", "CoT", "AI Safety", "LLMOps", "Prompt Engineering"],
     bullets: [
-      "Engineered end-to-end LLM workflows by designing advanced Chain-of-Thought (CoT) pipelines, complex system prompts, and structured JSON generation techniques for a foundational Multimodal LLM (under strict NDA for a Tier-1 Tech Giant).",
-      "Spearheaded Human-in-the-Loop (HITL) and Reinforcement Learning from Human Feedback (RLHF) initiatives, executing rigorous benchmarking to significantly mitigate hallucinations and refine zero-shot/few-shot model performance.",
-      "Analyzed execution steps (check runs) and user interactions to optimize core system flows, identifying logical failure points and redesigning prompt architectures to ensure outputs adhered to enterprise-grade accuracy and safety guardrails.",
-      "Formulated robust JSON-based prompting strategies and iterative workflow feedback loops, structuring high-quality conversational data to ensure seamless integration of LLM responses with downstream backend applications and agentic frameworks."
+      "Architected and optimized end-to-end LLM training pipelines targeting low latency, high throughput, and token efficiency designing structured JSON-based tool schemas to reduce token overhead and maximize model output performance.",
+      "Designed hierarchical multi-agent orchestration systems coordinating specialized LLMs running in parallel on a single user task, optimizing result quality, reducing latency, and improving overall pipeline efficiency.",
+      "Spearheaded RLHF and Human-in-the-Loop (HITL) training pipelines refining model behaviour through reward and loss signal feedback loops, consistently achieving the highest quality scores in the project team.",
+      "Integrated Chain-of-Thought (CoT) reasoning pipelines to improve model interpretability, trace internal decision behaviour, and enhance reasoning accuracy across coding, tool-use, and multi-step task evaluations.",
+      "Built real-time observation and tracking loops to monitor agent consistency, surface logical failure points, and iteratively improve model reliability across end-to-end agentic workflows.",
+      "Trained and evaluated models on AI Governance and Safety Alignment principles ensuring outputs remained ethical, legally compliant, and resistant to misuse, harmful generation, and policy violations in secure deployment environments."
     ]
   },
   {
     role: "AI/ML Engineer Trainee",
     company: "Frisson Devhub",
     location: "Noida, Uttar Pradesh",
-    duration: "May 2024 – June 2024",
+    duration: "May 2025 – June 2025",
     type: "Internship",
     tags: ["Python", "Machine Learning", "Deep Learning", "Neural Networks"],
     bullets: [

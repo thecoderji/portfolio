@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
 
 ABOUT KISHLAY:
 Name: Kishlay Choudhary
-Role: AI Engineer (actively seeking opportunities)
+Role: AI Engineer / GenAI Engineer (actively seeking opportunities)
 Location: Delhi, India | Open to Pan India · Remote
 Email: kishlaychoudhary1233@gmail.com
 Phone: +91-9990687453
@@ -28,10 +28,15 @@ LeetCode: https://leetcode.com/u/thecoderji/
 Education: B.Tech CSE, MGM College of Engineering, Noida (2021-2025)
 
 Experience:
-1. Research Associate - AI, Keywords Studios, Gurugram (Sept 2025-Present): LLM workflow engineering, system prompt design, CoT pipelines, AI evaluation, enterprise GenAI.
-2. AI/ML Engineer Trainee, Frisson Devhub, Noida (May-June 2024): Python, ML, DL, Neural Networks.
+1. Research Associate - AI, Keywords Studios, Gurugram (August 2025 - June 2026): Architected end-to-end LLM training pipelines targeting low latency, high throughput, and token efficiency. Designed hierarchical multi-agent orchestration systems. Spearheaded RLHF and Human-in-the-Loop (HITL) training pipelines. Integrated Chain-of-Thought (CoT) reasoning pipelines to improve model interpretability. Built real-time observation loops. Trained models on AI Governance and Safety Alignment. (Note: Recently laid off due to project closure, actively looking for new opportunities as an immediate joiner).
+2. AI/ML Engineer Trainee, Frisson Devhub, Noida (May-June 2025): Python, ML, DL, Neural Networks.
 
-Skills: Python, FastAPI, LangChain, LangGraph, Groq, OpenAI API, Gemini API, RAG pipelines, AI Agents, MCP, Docker, Git, FAISS, Pinecone, Prompt Engineering, n8n, Ollama, Pydantic, NumPy, Pandas, Scikit-learn
+Skills: 
+- Languages & Core: Python, Java, FastAPI, Pydantic, Streamlit, Docker, Git, REST APIs, JSON, System Design, DSA.
+- AI & LLM: LangChain, LangGraph, LlamaIndex, OpenAI API, Gemini API, Claude API, Groq, Prompt Engineering, RAG Pipelines, Agentic AI, Tool Calling, Function Calling, Multi-Agent Systems, RLHF, HITL, MCP, LLMOps, Observability.
+- Vector Databases: FAISS, Pinecone, ChromaDB.
+- ML & Data: NumPy, Pandas, Scikit-learn.
+- Core Concepts: LLM Architecture (Transformers, Attention), AI Safety & Governance, AI Alignment.
 
 Projects:
 1. Context-Aware RAG Chatbot (FastAPI + Gemini + FAISS)

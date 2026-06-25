@@ -235,7 +235,7 @@ print("Let's build something great!")`;
               transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
               className="h-2.5 w-2.5 rounded-full bg-green-400"
             />
-            Available for opportunities
+            <span className="font-bold text-white tracking-wide">Immediate Joiner</span> <span className="opacity-80">· Available for roles</span>
           </motion.div>
 
           <motion.h1 variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }} className="text-4xl font-bold leading-tight md:text-6xl lg:text-7xl">
