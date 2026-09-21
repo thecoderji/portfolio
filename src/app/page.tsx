@@ -34,12 +34,12 @@ export default function HomePage() {
           <div className="relative">
             <h1 className="font-display leading-[0.9]">
               <Reveal delay={0.05}>
-                <span className="block text-[17vw] font-black tracking-tight text-ink md:text-[8.5rem]">
+                <span className="block text-[min(17vw,3.25rem)] font-black tracking-tight text-ink md:text-[8.5rem]">
                   {profile.firstName}
                 </span>
               </Reveal>
               <Reveal delay={0.15}>
-                <span className="block text-[17vw] font-black italic tracking-tight text-vermilion md:text-[8.5rem]">
+                <span className="block whitespace-nowrap text-[min(17vw,3.25rem)] font-black italic tracking-tight text-vermilion md:whitespace-normal md:text-[8.5rem]">
                   {profile.lastName}
                 </span>
               </Reveal>
